@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>By Aisha</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #3b0d0c;
+      /* Maroon Background */
+      color: #f8e7c9;
+      /* Golden text */
+    }
+
+    /* Top header with golden borders and navigation */
+    .top-header {
+      background-color: #3b0d0c;
+      border-top: 3px solid #d4af37;
+      border-bottom: 3px solid #d4af37;
+      max-width: 1300px;
+      margin: 0 auto 20px auto;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Navigation links */
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #f8e7c9;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* Sign up button */
+    .signup-btn {
+      background: #d4af37;
+      color: #3b0d0c;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .signup-btn:hover {
+      background: #f8e7c9;
+    }
+
+    /* Header / Logo */
+    header {
+      text-align: center;
+      padding: 30px 0;
+      background-color: #3b0d0c;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #d4af37;
+      object-fit: cover;
+      background: #fff;
+    }
+
+    header h1 {
+      margin-top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #d4af37;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 20px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: #4a0f0e;
+      border: 1px solid #d4af37;
+      border-radius: 15px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 4px;
+      font-size: 20px;
+      color: #f8e7c9;
+      background: #4a0f0e;
+      padding-top: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #d4af37;
+      font-weight: bold;
+      margin: 5px 0;
+      background: #4a0f0e;
+    }
+
+    .order-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 15px auto 20px auto;
+      background: maroon;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .order-btn:hover {
+      background: #a30000;
+    }
+
+    /* Footer / Order Form */
+    footer {
+      background: #4a0f0e;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 2px solid #d4af37;
+    }
+
+    footer h2 {
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #f8e7c9;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      background: #fff;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: maroon;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #a30000;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .top-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="nav-links">
+      <a href="#">Bracelets</a>
+      <a href="#">Rings</a>
+      <a href="#">Earrings</a>
+      <a href="#">Lockets</a>
+    </div>
+    <a href="#" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="./aisaha.jpg" alt="Brand Logo" />
+    <h1>By Aisha</h1>
+  </header>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+    <!-- Row 1 -->
+    <div class="product-card"><img src="./bracelet1.jpg" alt="Product 1" /><h3>Bracelet</h3><p class="price">550</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./bracelet2.jpg" alt="Product 2" /><h3>Bracelet</h3><p class="price">600</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./bracelet3.jpg" alt="Product 3" /><h3>Bracelet</h3><p class="price">600</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./bracelet4.jpg" alt="Product 4" /><h3>Bracelet</h3><p class="price">500</p><a href="#" class="order-btn">Add to Cart</a></div>
+
+    <!-- Row 2 -->
+    <div class="product-card"><img src="./EARING6.jfif" alt="Product 5" /><h3>Earring</h3><p class="price">500</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./earrin3.jpg" alt="Product 6" /><h3>Earring</h3><p class="price">800</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./earring4.jpg" alt="Product 7" /><h3>Earring</h3><p class="price">450</p><a href="#" class="order-btn">Add to Cart</a></div>
+    <div class="product-card"><img src="./EARRING5.jfif" alt="Product 8" /><h3>Earring</h3><p class="price">800</p><a href="#" class="order-btn">Add to Cart</a></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Place Your Order</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="product">Select Product:</label>
+      <select id="product" name="product" required>
+        <option value="">-- Choose a Product --</option>
+        <option value="Product 1">Product Name 1</option>
+        <option value="Product 2">Product Name 2</option>
+        <option value="Product 3">Product Name 3</option>
+        <option value="Product 4">Product Name 4</option>
+        <option value="Product 5">Product Name 5</option>
+        <option value="Product 6">Product Name 6</option>
+        <option value="Product 7">Product Name 7</option>
+        <option value="Product 8">Product Name 8</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+  </footer>
+
+</body>
+
+</html>
